@@ -22,23 +22,22 @@ const GalleryPage = async ({ searchParams: { search } }: { searchParams: { searc
 
   return (
     <div className=''>
-      <div className='flex h-16 items-center px-4  container mx-auto gap-96 pt-8'>
+     <div className='flex flex-col lg:flex-row lg:h-16 items-center px-4 container mx-auto lg:gap-96 pt-8'>
 
-        <div className='flex justify-between'>
-          {/* Heading  */}
-          <h1 className='text-4xl font-bold ml-auto flex items-center space-x-4' >
-            Gallery
-          </h1>
-        </div>
+  {/* Heading */}
+  <h1 className='text-2xl lg:text-4xl font-bold flex pb-4 items-center space-x-2'>
+    Gallery
+  </h1>
 
-        <div className='flex-grow'></div>
 
-        
-        {/* Upload Button Div  */}
-        <UploadButton />
+<div className='flex-grow'></div>
 
-      </div>
-     <div className='w-1/2 mt-8'>
+{/* Upload Button Div */}
+<UploadButton />
+
+</div>
+
+     <div className='md:w-1/2 w-full lg:mt-8 mt-4 pr-5 '>
      <SearchForm initialSearch={search}/>
      </div>
 

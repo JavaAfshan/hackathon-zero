@@ -17,7 +17,7 @@ import Link from "next/link"
 
 export function AlbumCard({folder}:{folder:Folder}) {
   return (
-    <Card className="rounded-xl pr-20">
+    <Card className="rounded-xl md:pr-20 sm:pr-15">
       <CardHeader>
         <CardTitle>{folder.name}</CardTitle>
         <CardDescription>All your {folder.name} images</CardDescription>
@@ -25,7 +25,7 @@ export function AlbumCard({folder}:{folder:Folder}) {
       <CardContent>
       </CardContent>
       <CardFooter className="flex justify-between">
-        <Button asChild className="bg-white text-black rounded-xl hover:bg-white/70 text-black">
+        <Button asChild className="bg-white text-black rounded-xl hover:bg-white/70 ">
             <Link href={`/albums/${folder.name}`}>View Album</Link>
         </Button>
       </CardFooter>

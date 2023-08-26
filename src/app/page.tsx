@@ -14,11 +14,11 @@ export default function Home() {
   const [imageId, setImageId] = useState(""); 
     
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+    <main className="flex min-h-screen flex-col items-center justify-between p-8 md:p-24">
       {/* Button  */}
 
-      <div>
-        <CldUploadButton
+      <div >
+        <CldUploadButton className='bg-white text-black hover:bg-white rounded-xl  py-2 px-5 md:px-10 m-3 md:m-5'
          onUpload={(result: UploadResult) => {
           setImageId(result.info.public_id);
         }}

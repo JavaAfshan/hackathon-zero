@@ -19,13 +19,13 @@ const EditPage = (
 
                 <div className='flex justify-between'>
                     {/* Heading  */}
-                    <h1 className='text-4xl font-bold ml-auto flex items-center space-x-4' >
+                    <h1 className='sm:text-lg md:text-4xl font-bold ml-auto flex items-center space-x-4' >
                         Edit {publicId}
                     </h1>
                 </div>
 
             </div>
-            <div className="flex flex-col gap-4 w-1/2 pt-4">
+            <div className="flex flex-col gap-4 sm:w-full md:w-1/2 pt-4 pr-4">
                     <Button className="bg-white text-black rounded-xl hover:bg-white/70"
                         onClick={() => {
                             setTransformation("generative-fill");
@@ -40,25 +40,25 @@ const EditPage = (
                         onChange={(e) => setPendingPrompt(e.currentTarget.value)}
                     />
                 </div>
-            <div className="grid gap-4 grid-cols-5 pt-10">
+            <div className="grid gap-4 lg:grid-cols-5 md:grid-cols-3 sm:grid-cols-1 pr-2 pt-10">
                 <Button onClick={() => setTransformation(undefined)}
                     variant="ghost" className="bg-white text-black rounded-xl hover:bg-white/75 ">Clear All</Button>
 
                
-                <Button onClick={() => setTransformation("blur")}
-                    variant="default" className="bg-white text-black rounded-xl hover:bg-white/75">Blur</Button>
+                {/* <Button onClick={() => setTransformation("blur")}
+                    variant="default" className="bg-white text-black rounded-xl hover:bg-white/75">Blur</Button> */}
 
 
-                <Button onClick={() => setTransformation("pixelate")}
-                    variant="default" className="bg-white text-black rounded-xl hover:bg-white/75">Pixelate</Button>
+                {/* <Button onClick={() => setTransformation("pixelate")}
+                    variant="default" className="bg-white text-black rounded-xl hover:bg-white/75">Pixelate</Button> */}
 
 
-                <Button onClick={() => setTransformation("grayscale")}
-                    variant="default" className="bg-white text-black rounded-xl hover:bg-white/75">Grayscale</Button>
-                <Button onClick={() => setTransformation("tint")}
-                    variant="default" className="bg-white text-black rounded-xl hover:bg-white/75">Tint</Button>
-                <Button onClick={() => setTransformation("shear")}
-                    variant="default" className="bg-white text-black rounded-xl hover:bg-white/75">Shear</Button>
+                {/* <Button onClick={() => setTransformation("grayscale")}
+                    variant="default" className="bg-white text-black rounded-xl hover:bg-white/75">Grayscale</Button> */}
+                {/* <Button onClick={() => setTransformation("tint")}
+                    variant="default" className="bg-white text-black rounded-xl hover:bg-white/75">Tint</Button> */}
+                {/* <Button onClick={() => setTransformation("shear")}
+                    variant="default" className="bg-white text-black rounded-xl hover:bg-white/75">Shear</Button> */}
 
                 <Button onClick={() => setTransformation("zoomLoop")}
                     variant="default" className="bg-white text-black rounded-xl hover:bg-white/75">Zoom Loop</Button>
@@ -68,7 +68,7 @@ const EditPage = (
                     variant="default" className="bg-white text-black rounded-xl hover:bg-white/75">Remove Background</Button>
 
             </div>
-            <div className="grid grid-cols-2 gap-11">
+            <div className="grid grid-cols-1 pr-2 md:grid-cols-2 gap-11 ">
                 <div className="pt-10">
                     <CldImage
                         src={publicId}
@@ -91,7 +91,7 @@ const EditPage = (
                         />
                     </div>
                 }
-                {
+                {/* {
                     transformation === 'blur' &&
                     <div className="pt-10">
                         <CldImage
@@ -101,8 +101,8 @@ const EditPage = (
                             blur="800"
                         />
                     </div>
-                }
-                {
+                } */}
+                {/* {
                     transformation === 'shear' &&
                     <div className="pt-10">
                         <CldImage
@@ -112,8 +112,8 @@ const EditPage = (
                             shear="40:0"
                         />
                     </div>
-                }
-                {
+                } */}
+                {/* {
                     transformation === 'grayscale' &&
                     <div className="pt-10">
                         <CldImage
@@ -123,8 +123,8 @@ const EditPage = (
                             grayscale
                         />
                     </div>
-                }
-                {
+                } */}
+                {/* {
                     transformation === 'tint' &&
                     <div className="pt-10">
                         <CldImage
@@ -134,7 +134,7 @@ const EditPage = (
                             tint="equalize:80:blue:blueviolet"
                         />
                     </div>
-                }
+                } */}
                 {
                     transformation === 'removeBackground' &&
                     <div className="pt-10">
@@ -157,7 +157,7 @@ const EditPage = (
                         />
                     </div>
                 }
-                {
+                {/* {
                     transformation === 'pixelate' &&
                     <div className="pt-10">
                         <CldImage
@@ -167,7 +167,7 @@ const EditPage = (
                             pixelate
                         />
                     </div>
-                }
+                } */}
             </div>
 
         </div>

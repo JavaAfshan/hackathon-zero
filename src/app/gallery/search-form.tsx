@@ -20,12 +20,12 @@ const SearchForm = ({initialSearch}:{initialSearch:string}) => {
             <Label htmlFor="name" className="text-right">
               Search By Tag
             </Label>
-            <div className="flex mt-5">
+            <div className="md:flex  mt-5">
             <Input
             onChange={(e)=>setTagName(e.currentTarget.value)}
             id="album-name" value={tagName}
             />
-            <Button type="submit" className='bg-white text-black hover:bg-white/60 '>Search</Button>
+            <Button type="submit" className='bg-white md:mt-0 mt-4 text-black hover:bg-white/60 '>Search</Button>
             </div>
     </form>
   )
